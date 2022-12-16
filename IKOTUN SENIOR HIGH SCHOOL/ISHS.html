@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ikotun senior high school.com</title>
+    <style>
+      body {
+        margin: 0;
+        height: 3300px;
+        font-family: Arial;
+      }
+
+      .container {
+        position: fixed;
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px 16px 15px;
+        background-color: darkgreen;
+        border-bottom-width: 1px;
+        border-bottom-color: grey;
+        border-bottom-style: outset;
+        right: 0px;
+        left: 0px;
+        z-index: 100;
+      }
+
+      .school-name {
+        font-size: 26px;
+        margin: 0 0 0 10px;
+        color: white;
+        font-family: Arial;
+        align-self: center;
+      }
+
+      .hamburger-menu {
+        width: 30px;
+        height: 30px;
+        border: outset;
+        border: solid;
+        border-width: 1px;
+        border-color: lightgray;
+        padding: 8px;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #divs {
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+        cursor: pointer;
+        border: outset;
+        padding: 6px 10px;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        border-radius: 2px;
+        transition: background-color 0.3s;
+      }
+
+      #divs:hover {
+        background-color: rgba(0, 0, 0, 0.384);
+      }
+
+      #divs:active {
+        opacity: 0.2;
+      }
+
+      .div {
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3;
+      }
+
+      .div:active {
+        opacity: 0.2;
+      }
+
+      .div:hover {
+        border: outset;
+        padding: 6px 10px;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        padding: 6px 10px;
+        background-color: rgba(0, 0, 0, 0.384);
+      }
+
+      @media (max-width: 780px) {
+        .div,
+        #divs {
+          opacity: 0;
+          padding: 0;
+          font-size: 1px;
+        }
+
+        .school-name {
+          font-size: 20px;
+        }
+
+        .hamburger-menu {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .school {
+          font-size: 18px;
+          margin-left: 0;
+        }
+
+        .container5 {
+          font-size: 18px;
+          margin-left: 0;
+          font-weight: 700;
+        }
+
+        .container4 {
+          left: 50px;
+        }
+      }
+
+      .hamburger-menu:hover {
+        background-color: rgba(0, 0, 0, 0.342);
+      }
+
+      .container2 {
+        position: relative;
+        right: s0px;
+        left: 0px;
+        height: 1280px;
+      }
+
+      .container3 {
+        position: absolute;
+        display: flex;
+        top: 82px;
+        left: 0;
+        bottom: 500px;
+        right: 0;
+        margin-bottom: 90px;
+      }
+
+      .img {
+        flex: 1;
+        object-fit: cover;
+        filter: brightness(0.2);
+      }
+
+      .img:hover {
+        filter: brightness(0.6);
+      }
+      .container4 {
+        position: absolute;
+        top: 250px;
+        left: 100px;
+      }
+
+      .container5 {
+        font-size: 1.7em;
+        color: darkgreen;
+        font-weight: 600;
+      }
+
+      .school {
+        font-size: 2.8em;
+        color: darkgreen;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+
+      .learnmore {
+        background-color: white;
+        color: darkgreen;
+        font-weight: 700;
+        border-radius: 6px;
+        padding: 6px 10px;
+        font-size: 15px;
+        border-top: 0;
+        border: 1px solid darkgreen;
+        cursor: pointer;
+      }
+
+      .learnmore:hover {
+        background-color: darkgreen;
+        color: white;
+      }
+
+      .learnmore:active {
+        opacity: 0.6;
+      }
+
+      @media (max-width: 1050px) {
+        .img {
+          max-width: 100%;
+        }
+      }
+
+      #container1 {
+        position: relative;
+        top: 800px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+
+      .img1 {
+        width: 90%;
+        height: 300px;
+        object-fit: cover;
+        margin: 35px;
+        border-radius: 20px;
+      }
+
+      #container6 {
+        margin-left: 20px;
+        margin-top: 55px;
+      }
+
+      #aboutus {
+        font-size: 2em;
+        color: grey;
+      }
+
+      .origin {
+        color: darkgreen;
+        font-family: Arial;
+        font-size: 1.5em;
+        line-height: 25px;
+      }
+
+      .history {
+        font-family: Arial;
+        color: grey;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 900px) {
+        #container1 {
+          grid-template-columns: 1fr;
+        }
+
+        #container6 {
+          margin-top: 0;
+          margin-right: 10px;
+        }
+
+        .img1 {
+          margin: 25px;
+        }
+      }
+
+      #container01 {
+        position: relative;
+        top: 860px;
+      }
+
+      .first {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #subject {
+        color: grey;
+        font-size: 26px;
+        margin-bottom: 0;
+      }
+
+      .explore-subject {
+        color: darkgreen;
+        font-size: 30px;
+        margin-top: 10px;
+      }
+
+      .container001 {
+        display: grid;
+        margin-left: 49px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1px;
+        row-gap: 30px;
+      }
+
+      .img2 {
+        width: 90%;
+        border-radius: 20px;
+        margin: 0;
+        cursor: pointer;
+        filter: brightness(0.3);
+      }
+
+      .img2:hover {
+        filter: brightness(0.8);
+      }
+
+      .img2:active {
+        opacity: 0.2;
+      }
+
+      .containerx {
+        position: relative;
+      }
+
+      .p0,
+      .p1,
+      .p2,
+      .p3,
+      .p4,
+      .p5,
+      .p6,
+      .p7 {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        font-weight: 800;
+        color: darkgreen;
+        font-size: 22px;
+      }
+
+      #right {
+        font-weight: 700;
+        color: white;
+      }
+
+      @media (max-width: 900px) {
+        .container001 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .container001 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      #container02 {
+        top: 860px;
+        background-color: lightcoral;
+      }
+
+      #container03 {
+        position: relative;
+        top: 960px;
+      }
+
+      #container003 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 15px;
+        margin: 0;
+      }
+
+      #container-img {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+
+      #img-1 {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: -10px;
+        cursor: pointer;
+      }
+
+      #img-1:hover {
+        filter: brightness(0.6);
+      }
+
+      #container-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2f1f8;
+        margin-top: -1px;
+        border-radius: 5px;
+        height: 60px;
+      }
+
+      #text-1 {
+        font-size: 100%;
+        font-weight: 900;
+        color: darkgreen;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      #text-2 {
+        font-size: 100%;
+        font-weight: 700;
+        color: darkgray;
+      }
+
+      @media (max-width: 900px) {
+        .container001 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        #container003 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .container001 {
+          grid-template-columns: 1fr;
+        }
+
+        #container003 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      #container00 {
+        position: relative;
+        top: 999px;
+      }
+
+      #containerY {
+        display: flex;
+        justify-content: center;
+        margin-left: 32px;
+      }
+
+      #container-img1 {
+        margin-right: 29px;
+      }
+
+      #img-4 {
+        border-radius: 10px;
+        max-width: 80%;
+        filter: brightness(0.8);
+        cursor: pointer;
+      }
+
+      #img-4:hover {
+        filter: brightness(0.3);
+      }
+
+      #container-text1 {
+        width: 77%;
+        margin-top: -1px;
+        height: 67px;
+        background-color: #f2f1f8;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        border-radius: 10px;
+      }
+
+      #text-2 {
+        margin-top: -8px;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      #text-1 {
+        margin: 0px;
+        padding-left: 10px;
+      }
+
+      @media (max-width: 550px) {
+        #containerY {
+          display: grid;
+          grid-template-columns: 1fr;
+          margin-left: 100px;
+        }
+
+        #container-img1 {
+          margin-top: 20px;
+        }
+      }
+
+      #container0001 {
+        position: relative;
+        top: 1150px;
+      }
+
+      #containerZ {
+        background-color: darkgreen;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 20px;
+        padding-right: 15px;
+      }
+
+      #containerA {
+        margin-left: 16px;
+      }
+
+      #add,
+      #adds {
+        color: white;
+        line-height: 26px;
+      }
+
+      #adds:hover {
+        color: darkblue;
+      }
+
+      h3 {
+        color: grey;
+      }
+
+      #ads {
+        margin-left: 20px;
+      }
+
+      #containerB {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: darkgreen;
+        position: relative;
+        top: 1px;
+      }
+
+      #containerC {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      #containerD {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+      }
+
+      #link {
+        color: grey;
+      }
+
+      #link:hover {
+        color: darkblue;
+      }
+
+      #name {
+        color: grey;
+      }
+
+      #img6 {
+        width: 16px;
+      }
+
+      #search {
+        height: 30px;
+        width: 270px;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 6px 4px 5px rgb(43, 42, 42);
+        padding-left: 10px;
+        transition: box-shadow 0.3s;
+      }
+
+      #search:hover {
+        box-shadow: 5px 5px 10px black;
+      }
+
+      a {
+        text-decoration: none !important;
+      }
+
+      @media (max-width: 550px) {
+        #containerZ {
+          display: grid;
+          grid-template-columns: 1fr;
+          padding-left: 10px;
+          padding-bottom: 20px;
+        }
+
+        #containerA {
+          margin: 0;
+          padding-left: 15px;
+        }
+
+        #containerB {
+          display: grid;
+          grid-template-columns: 1fr;
+          padding-right: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="school-name">Ikotun Senior High School</h1>
+      <a href="#aboutus"><nav id="divs">Home</nav></a>
+      <a href="#subject"><div class="div">Subject</div></a>
+      <a href="#container003"><div class="div">Teachers</div></a>
+      <div class="div">Contact</div>
+      <img class="hamburger-menu" src="hamburger-menu.svg" />
+    </header>
+    <main class="container2">
+      <div class="container3"><img class="img" src="carousel-2.jpg" /></div>
+      <section class="container4">
+        <div class="container5">My School</div>
+        <div><h4 class="school">IKOTUN SENIOR HIGH SCHOOL</h4></div>
+        <div>
+          <a href="#container1"
+            ><button class="learnmore">Learn more</button></a
+          >
+        </div>
+      </section>
+      <section id="container1">
+        <img class="img1" src="download.jpg" />
+        <div id="container6">
+          <div id="aboutus">About us</div>
+          <div class="origin">Ikotun Senior High School:Origins</div>
+          <div>
+            <p class="history">
+              Ikotun senior high school was founded in 1998. It has participated
+              in different competitions and is one of the best in district 1. It
+              has a lot of awards from competitons like spelling bee and rotary
+              club. The pioneer teachers are now principals and vice principals
+              of their respective schools.
+            </p>
+
+            <p class="history">
+              The school has had a lot of students in recent times but
+              nonetheless strived to maintain its name.coming to the school has
+              been one of my joys in recent times
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--this is a comment-->
+      <section id="container01">
+        <div class="first">
+          <h3 id="subject">Subjects</h3>
+          <h2 class="explore-subject">Explore Top Subjects</h2>
+        </div>
+        <div class="container001">
+          <div class="containerx">
+            <img class="img2" src="download (6).jpg" />
+            <p class="p0">English Language</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="download (2).jpg" />
+            <p class="p1">Mathematics</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="download (3).jpg" />
+            <p class="p2">Biology</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="download (1).jpg" />
+            <p class="p3">Chemistry</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="images (1).jpg" />
+            <p class="p4">Physics</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="download (4).jpg" />
+            <p class="p5">Economics</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="download (5).jpg" />
+            <p class="p6">Literature</p>
+          </div>
+          <div class="containerx">
+            <img class="img2" src="images (5).jpg" />
+            <p class="p7">Languages</p>
+          </div>
+        </div>
+      </section>
+      <section id="container03">
+        <div class="first">
+          <h3 id="subject">Teachers</h3>
+          <h2 class="explore-subject">Meet our Teachers</h2>
+        </div>
+        <div id="container003">
+          <div id="container-img">
+            <div id="img-2"><img id="img-1" src="team-1.jpg" /></div>
+            <div id="container-text">
+              <p id="text-1">The Principal</p>
+              <p id="text-2">Mrs Oyelehin A.A</p>
+            </div>
+          </div>
+          <div id="container-img">
+            <div id="img-2"><img id="img-1" src="team-2.jpg" /></div>
+            <div id="container-text">
+              <p id="text-1">Vice Principal Admin</p>
+              <p id="text-2">Mrs Olaleye O.A</p>
+            </div>
+          </div>
+          <div id="container-img">
+            <div id="img-2"><img id="img-1" src="team-3.jpg" /></div>
+            <div id="container-text">
+              <p id="text-1">Vice Principal Acad</p>
+              <p id="text-2">Mrs Morakinyo G.N</p>
+            </div>
+          </div>
+          <div id="container-img">
+            <div id="img-2"><img id="img-1" src="team-4.jpg" /></div>
+            <div id="container-text">
+              <p id="text-1">Teacher</p>
+              <p id="text-2">Staff</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="container00">
+        <div class="first">
+          <h3 id="subject">Testimonials:</h3>
+          <h2 class="explore-subject">What our students say...</h2>
+        </div>
+        <div id="containerY">
+          <div id="container-img1">
+            <div><img id="img-4" src="team-2.jpg" /></div>
+            <div id="container-text1">
+              <p id="text-2">
+                I am glad that. I was a member of this school I learnt from this
+                school
+              </p>
+              <p id="text-1">David Sunday</p>
+            </div>
+          </div>
+          <div id="container-img1">
+            <div><img id="img-4" src="team-1.jpg" /></div>
+            <div id="container-text1">
+              <p id="text-2">
+                I am glad that. I was a member of this school I learnt from this
+                school
+              </p>
+              <p id="text-1">Tobi Brown</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="container0001">
+        <div id="containerZ">
+          <div id="containerA">
+            <h3>Contact Us</h3>
+
+            <p id="add">
+              <img id="img6" src="visit.png" /> 4 Gboye Ventures Ikotun Lagos
+            </p>
+
+            <p id="add">
+              <img id="img6" src="ringer-volume.png" /> 08136095561
+            </p>
+
+            <p id="add">
+              <img id="img6" src="chat-message.png" />
+              prospermarshalls@gmail.com
+            </p>
+          </div>
+          <div id="ads">
+            <h3>Our Courses</h3>
+            <a
+              href="https://www.interaction-design.org/literature/topics/web-design"
+              target="_blank"
+              ><p id="adds"><span id="right"> > </span> Web design</p></a
+            >
+            <a
+              href="https://flutter.dev/multi-platform?gclid=CjwKCAiA7IGcBhA8EiwAFfUDsdDZXlSSciWU2m-RvwAugOiJJBr-d8JuIfRS-t-Eeta858Dq3dVFnhoCgdcQAvD_BwE&gclsrc=aw.ds"
+              target="_blank"
+              ><p id="adds"><span id="right"> > </span> Apps Design</p></a
+            >
+            <a
+              href="https://www.holidaygiftssearch.com/web?q=what%20is%20digital%20marketing&o=1669867&akid=1000001101hgs135883741850kwd-1434158722&gclid=CjwKCAiA7IGcBhA8EiwAFfUDsbZnwR2NofM6wQxRfIkf_Kd1Q1XjY5Nz29Awqn62CYnKULBh0nsN5BoC6mwQAvD_BwE&ueid=fd3b939c-7782-4ead-b502-9971a735805c&qo=semQuery&ad=semA&ag=fw11&an=google_s"
+              target="_blank"
+              ><p id="adds"><span id="right"> > </span> digital marketing</p>
+            </a>
+          </div>
+          <div id="ads">
+            <h3>News Letter</h3>
+            <p id="add">
+              best in the world as it is a college of knowledge and
+              understanding
+            </p>
+            <input id="search" type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div id="containerB">
+          <div id="containerD">
+            <p id="add">
+              <span id="name">prospermarshalls@gmail.com </span>. All Rights
+              Reserved Designed By
+              <a
+                href="https://www.tiktok.com/@mpj.01?_t=8VUOlQnLoko&_r=1"
+                target="_blank"
+                ><span id="link">Prosper Marshall</span></a
+              >
+            </p>
+          </div>
+          <div id="containerC">
+            <a href=""><p id="adds">Privacy</p></a>
+            <a href=""><p id="adds">Terms</p></a>
+            <p id="adds">FAQs</p>
+            <p id="adds">Help</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
